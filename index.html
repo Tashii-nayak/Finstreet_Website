@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINSTREET 24'</title>
+    <title>FINSTREET 25'</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Diplomata&family=Josefin+Sans:wght@500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
         body {
@@ -33,133 +34,156 @@
             z-index: 10; /* Bring content above the video */
         }
     </style>
+
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-900 text-white">
 
     <!-- Background Video -->
-    <video class="background-video" autoplay loop muted>
-        <source src="./bgVideo.mp4" type="video/mp4">
-    </video>
+    <div class="relative h-screen">
+        <video class="absolute top-0 left-0 w-full h-full object-cover z-[-10]" autoplay loop muted>
+            <source src="./bgVideo.mp4" type="video/mp4">
+        </video>
+    
 
-    <!-- Main Content -->
-    <div class="content">
         <!-- Logo Bar -->
-        <div class="flex justify-center gap-6 mt-4">
-            <img src="./bitmlogo.png" alt="BIT Mesra Logo" class="h-20">
-            <img src="./IIC-logo.png" alt="IIC Logo" class="h-20">
-        </div>
 
-        <!-- Finstreet Title -->
-        <div class="text-center mt-6">
-            <img src="./Finstreet-logo.png" alt="Finstreet Logo" class="w-28 mx-auto">
-            <h1 class="text-4xl mt-4">
-                <span class="text-yellow-400 fin-font">Fin</span>
-                <span class="street-font">Street</span>
-            </h1>
+        <div class="flex justify-between items-center mt-14 px-8">
+
+            <div class="text-left flex items-center gap-4">
+                <img src="./Finstreet-logo.png" alt="Finstreet Logo" class="w-28">
+                <h1 class="text-4xl">
+                    <span class="text-yellow-400 fin-font">Fin</span>
+                    <span class="street-font">Street</span>
+                </h1>
+            </div>
+
+            <div class="flex gap-4 mt-18 px-8">
+                <img src="./bitmlogo.png" alt="BIT Mesra Logo" class="h-20">
+                <img src="./IIC-logo.png" alt="IIC Logo" class="h-20">
+            </div>
         </div>
+    </div>
 
         <!-- Navigation Bar -->
-        <nav class="bg-black bg-opacity-50 py-3 mt-4">
+        <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-75 py-3 z-50">
             <ul class="flex justify-center gap-8 text-lg font-medium">
+                <li><a href="#about" class="hover:text-yellow-400">About</a></li>
                 <li><a href="#album" class="hover:text-yellow-400">Events</a></li>
                 <li><a href="#carousel" class="hover:text-yellow-400">Highlights</a></li>
                 <li><a href="#footer" class="hover:text-yellow-400">Contact</a></li>
+                
             </ul>
-        </nav>
+        </nav>  
 
-       
+
+
+        <div class="">
+            <section id="about" class="">
+
+                <div class="flex justify-center mt-16">
+                    <img src="./bitmlogo.png" alt="Finstreet 25'" class="flex justify-center w-48">
+                    <p class="mt-5 text-white font-semibold">About Finstreet!</p>
+                </div>
+            </section>
+        </div>
+
+
 
            <!-- Album Section -->
-           <section id="album" class="py-12 px-4">
-            <h2 class="text-3xl font-semibold text-center mb-8 uppercase">Event Album</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event1.jpg" alt="Event 1" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Finance Workshop</h3>
-                    <p class="mt-2 text-gray-300">Learn the fundamentals of finance with industry experts.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+        <div class="flex justify-center items-start mb-15">
+            <section id="album" class="py-12 px-4 mt-64">
+                <h2 class="text-3xl font-bold text-center mb-32 uppercase">Event Album</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
+                    <!-- Card 1 -->
+                    <div class="bg- rounded-lg text-center">
+                        <img src="./event2.jpg" alt="Event 2" class="w-32 h-32 object-cover rounded-full mx-auto ">
+                        <h3 class="text-lg font-semibold mt-4">Finance Workshop</h3>
+                        <p class="mt-2 text-gray-300">Learn the fundamentals of finance with industry experts.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 text-xs font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event2.jpg" alt="Event 2" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Stock Market Basics</h3>
+                        <p class="mt-2 text-gray-300">Explore stock trading strategies and tips.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event3.jpg" alt="Event 3" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Crypto Insights</h3>
+                        <p class="mt-2 text-gray-300">Dive into the world of cryptocurrencies and blockchain.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event4.jpg" alt="Event 4" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Case Study Competition</h3>
+                        <p class="mt-2 text-gray-300">Showcase your analytical skills in a case challenge.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event5.jpg" alt="Event 5" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Networking Night</h3>
+                        <p class="mt-2 text-gray-300">Connect with industry professionals over dinner.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event6.jpg" alt="Event 6" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Startup Showcase</h3>
+                        <p class="mt-2 text-gray-300">Witness the innovative pitches by budding entrepreneurs.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event7.jpg" alt="Event 7" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Personal Finance</h3>
+                        <p class="mt-2 text-gray-300">Master personal budgeting and financial planning.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event8.jpg" alt="Event 8" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Business Quiz</h3>
+                        <p class="mt-2 text-gray-300">Test your business knowledge and win prizes.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event9.jpg" alt="Event 9" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Hackathon</h3>
+                        <p class="mt-2 text-gray-300">Collaborate and innovate in a 24-hour coding event.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event10.jpg" alt="Event 10" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Alumni Panel</h3>
+                        <p class="mt-2 text-gray-300">Hear from successful alumni about their journeys.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event11.jpg" alt="Event 11" class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <h3 class="text-lg font-semibold mt-4">Financial Literacy</h3>
+                        <p class="mt-2 text-gray-300">Improve your knowledge about managing money.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="rounded-lg text-center">
+                        <img src="./event12.jpg" alt="Event 12" class="w-32 h-32 object-cover rounded-full">
+                        <h3 class="text-lg font-semibold mt-4">Leadership Talk</h3>
+                        <p class="mt-2 text-gray-300">Learn leadership lessons from top executives.</p>
+                        <button class="mt-4 px-6 py-3 bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event2.jpg" alt="Event 2" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Stock Market Basics</h3>
-                    <p class="mt-2 text-gray-300">Explore stock trading strategies and tips.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event3.jpg" alt="Event 3" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Crypto Insights</h3>
-                    <p class="mt-2 text-gray-300">Dive into the world of cryptocurrencies and blockchain.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 4 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event4.jpg" alt="Event 4" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Case Study Competition</h3>
-                    <p class="mt-2 text-gray-300">Showcase your analytical skills in a case challenge.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 5 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event5.jpg" alt="Event 5" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Networking Night</h3>
-                    <p class="mt-2 text-gray-300">Connect with industry professionals over dinner.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 6 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event6.jpg" alt="Event 6" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Startup Showcase</h3>
-                    <p class="mt-2 text-gray-300">Witness the innovative pitches by budding entrepreneurs.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 7 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event7.jpg" alt="Event 7" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Personal Finance</h3>
-                    <p class="mt-2 text-gray-300">Master personal budgeting and financial planning.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 8 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event8.jpg" alt="Event 8" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Business Quiz</h3>
-                    <p class="mt-2 text-gray-300">Test your business knowledge and win prizes.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 9 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event9.jpg" alt="Event 9" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Hackathon</h3>
-                    <p class="mt-2 text-gray-300">Collaborate and innovate in a 24-hour coding event.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 10 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event10.jpg" alt="Event 10" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Alumni Panel</h3>
-                    <p class="mt-2 text-gray-300">Hear from successful alumni about their journeys.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 11 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event11.jpg" alt="Event 11" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Financial Literacy</h3>
-                    <p class="mt-2 text-gray-300">Improve your knowledge about managing money.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-                <!-- Card 12 -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <img src="./event12.jpg" alt="Event 12" class="w-full h-48 object-cover rounded-lg">
-                    <h3 class="text-lg font-semibold mt-4">Leadership Talk</h3>
-                    <p class="mt-2 text-gray-300">Learn leadership lessons from top executives.</p>
-                    <button class="mt-4 w-full bg-yellow-500 py-2 text-sm font-semibold rounded-lg hover:bg-yellow-400">Register</button>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
 
         <!-- Carousel Section -->
         <section id="carousel" class="py-12 bg-gray-800">
@@ -199,7 +223,6 @@
                 <p class="text-sm text-gray-400">© 2024 Finstreet, BIT Mesra. All Rights Reserved.</p>
             </div>
         </footer>
-    </div>
 
 </body>
 </html>
